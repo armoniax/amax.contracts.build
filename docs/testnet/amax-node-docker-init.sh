@@ -27,6 +27,7 @@ fi
 mkdir -p ${root_dir}/config
 
 # input privkey
+amax_pubkey="Input pubkey here"
 amax_privkey="Input privkey here"
 [[ "X${amax_privkey}" == "XInput privkey here" ]] && echo "Please set the amax_privkey" && exit 1
 
@@ -48,7 +49,7 @@ abi-serializer-max-time-ms = 5000
 
 enable-stale-production = true
 producer-name = amax
-signature-provider = AM5SuwLEfX8GBFhBYryH98a7dbgpTV8BBPojH2m8wr7yT3hks5iH=KEY:${amax_privkey}
+signature-provider = ${amax_pubkey}=KEY:${amax_privkey}
 
 read-mode = speculative
 p2p-accept-transactions = true
@@ -77,7 +78,7 @@ EOF
 cat <<EOF > ${root_dir}/config/genesis.json
 {
   "initial_timestamp": "2022-03-06T12:00:00.000",
-  "initial_key": "AM5SuwLEfX8GBFhBYryH98a7dbgpTV8BBPojH2m8wr7yT3hks5iH",
+  "initial_key": "${amax_pubkey}",
   "initial_configuration": {
     "max_block_net_usage": 1048576,
     "target_block_net_usage_pct": 1000,
