@@ -47,6 +47,7 @@ plugin = eosio::producer_api_plugin
 
 abi-serializer-max-time-ms = 5000
 
+## producer config
 enable-stale-production = true
 producer-name = amax
 signature-provider = ${amax_pubkey}=KEY:${amax_privkey}
@@ -55,11 +56,11 @@ read-mode = speculative
 p2p-accept-transactions = true
 api-accept-transactions = true
 
-p2p-listen-endpoint = 0.0.0.0:9876
-p2p-server-address = 0.0.0.0:9876   # modify it to external IP or domain
+p2p-listen-endpoint = 0.0.0.0:9806
+p2p-server-address = 0.0.0.0:9806   # modify it to external IP or domain
 http-server-address = 0.0.0.0:8888
 
-# p2p-peer-address =
+# p2p-peer-address = testnet.amaxscan.io:9806
 
 chain-state-db-size-mb = 655360
 reversible-blocks-db-size-mb = 65536
