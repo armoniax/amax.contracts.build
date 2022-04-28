@@ -18,7 +18,7 @@ class Amax < Formula
 
    bottle do
       root_url "https://github.com/armoniax/amax.releases/blob/main/amax.chain/v0.5.0"
-      sha256 monterey: "8bb543fcfa3c1115b07d57fd881afa7c7752754d14c136cba24c17d3530762c8"
+      sha256 monterey: "a18a6b7ef74848c40d735f128147853b360fd62e0efea84d34ff45a4a3f18283"
    end
    def install
       raise "Error, only supporting binary packages at this time"
